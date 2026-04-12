@@ -1,0 +1,422 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:     #FAFAF7;
+  --amber:  #D97706;
+  --dark:   #1A1A1A;
+  --muted:  #6B6B65;
+  --line:   rgba(0,0,0,0.1);
+  --tag-bg: #F5F0E8;
+}
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Archivo', 'PingFang SC', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Layout ── */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.4rem;
+  height: 52px;
+  border-bottom: 2px solid var(--amber);
+  flex-shrink: 0;
+}
+
+.header-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.header-dot  { opacity: 0.35; }
+.header-alias { font-weight: 500; font-size: 0.9rem; color: var(--muted); }
+
+.header-nav {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.header-nav a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 150ms;
+}
+
+.header-nav a:hover { color: var(--amber); }
+
+/* ── Main grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 38.2fr 61.8fr;
+  grid-template-rows: 38.2fr 61.8fr;
+  flex: 1;
+  border-bottom: 1px solid var(--line);
+}
+
+/* cell base */
+.cell {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Contact spans top-right two columns */
+
+.cell-exp {
+  grid-column: 2;
+  grid-row: 1;
+  border-bottom: 1px solid var(--line);
+}
+
+.cell-projects {
+  grid-column: 2;
+  grid-row: 2;
+  border-right: none;
+}
+
+/* Hero spans 2 rows */
+.cell-hero {
+  grid-row: 1 / 3;
+  border-bottom: none;
+  justify-content: space-between;
+}
+
+/* ── Cell label ── */
+.cell-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Hero ── */
+.hero-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--dark);
+}
+
+.hero-alias {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--amber);
+  margin-top: 0.6rem;
+}
+
+.hero-desc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* ── Tags ── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tag {
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  padding: 0.28rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--tag-bg);
+  color: var(--dark);
+  transition: background 150ms, color 150ms;
+  cursor: default;
+}
+
+.tag:hover {
+  background: var(--amber);
+  color: #fff;
+}
+
+/* ── Contact icons ── */
+.contact-icons {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--tag-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background 150ms, color 150ms, transform 150ms;
+}
+
+.icon-btn:hover {
+  background: var(--amber);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ── Experience ── */
+.exp-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exp-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.exp-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a6db5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exp-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exp-logo-ks {
+  background: #fff;
+}
+
+.exp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.exp-co {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.exp-yr {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Projects ── */
+.proj-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-list li {
+  border-top: 1px solid var(--line);
+}
+
+.proj-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.proj-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.42rem 0.4rem;
+  text-decoration: none;
+  color: var(--dark);
+  border-left: 2px solid transparent;
+  margin-left: -0.4rem;
+  transition: border-color 150ms, background 150ms;
+}
+
+.proj-list a:hover {
+  border-left-color: var(--amber);
+  background: rgba(217,119,6,0.05);
+}
+
+.pn {
+  font-family: 'Archivo', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.pd {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+/* ── Footer ── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.4rem;
+  height: 40px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* ── WeChat popup ── */
+.wechat-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.wechat-overlay.open { display: flex; }
+
+.wechat-popup {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 2rem 2.4rem;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+  animation: pop-in 160ms ease;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.wechat-popup-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wechat-popup-id {
+  font-family: 'Archivo', monospace;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0.5rem 0 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.wechat-copy-btn {
+  background: var(--amber);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.6rem;
+  font-size: 0.88rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 150ms;
+}
+
+.wechat-copy-btn:hover { opacity: 0.85; }
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .cell-hero {
+    grid-row: auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cell-exp {
+    grid-column: auto;
+    grid-row: auto;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cell-projects {
+    grid-column: auto;
+    grid-row: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cell { border-right: none; }
+
+  .hero-title { font-size: clamp(3.2rem, 18vw, 5rem); }
+
+  .hero-alias { font-size: 1.2rem; }
+
+  .contact-icons { gap: 0.45rem; }
+
+  .icon-btn { width: 46px; height: 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}

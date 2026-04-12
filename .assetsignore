@@ -1,0 +1,6 @@
+.git/
+.claude/
+.wrangler/
+tests/
+README.md
+wrangler.toml
