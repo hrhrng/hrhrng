@@ -14,8 +14,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Hide content until i18n is applied to avoid a wrong-language flash */
+html.i18n-pending body { visibility: hidden; }
+
 body {
-  font-family: 'Archivo', 'PingFang SC', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg);
   color: var(--dark);
   min-height: 100vh;
@@ -246,6 +249,14 @@ body {
   background: #fff;
 }
 
+.exp-logo-mm {
+  background: #FF4E45;
+  color: #fff;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
 .exp-info {
   display: flex;
   flex-direction: column;
@@ -318,6 +329,35 @@ body {
   color: var(--muted);
   flex-shrink: 0;
 }
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang-toggle button {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  border: none;
+  cursor: pointer;
+  transition: color 150ms;
+}
+
+.lang-toggle button.active { color: var(--dark); font-weight: 700; }
+.lang-toggle button:not(.active):hover { color: var(--amber); }
+.lang-sep { color: var(--muted); opacity: 0.4; font-size: 0.7rem; }
 
 /* ── WeChat popup ── */
 .wechat-overlay {
