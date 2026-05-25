@@ -1,13 +1,5 @@
 ## Hi, I am @hrhrng
 
-## Work Experience
-
-<img src="https://www.minimaxi.com/favicon.ico" width="20" height="20"/> **MiniMax** · AI Platform Engineer (March 2025 - Present)
-
-Building [open-managed-agents](https://github.com/hrhrng/open-managed-agents) — an open-source managed AI agents platform on Cloudflare Workers. Multi-model orchestration, sandbox environments, event-driven agent architecture.
-
----
-
 ## Projects
 
 🤖 [open-managed-agents](https://github.com/open-ma/open-managed-agents) — Open-source Managed AI Agents platform on Cloudflare Workers · Multi-model orchestration, sandbox environments, event-driven agent architecture
