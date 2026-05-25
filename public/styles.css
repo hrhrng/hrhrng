@@ -250,11 +250,13 @@ body {
 }
 
 .exp-logo-mm {
-  background: #FF4E45;
-  color: #fff;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
-  font-size: 1.2rem;
+  background: #fff;
+}
+
+.exp-logo-mm img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .exp-info {
