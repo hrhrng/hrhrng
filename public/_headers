@@ -1,0 +1,8 @@
+# Long-cache static images so reloads serve from cache (no revalidation flicker).
+# HTML is intentionally left out so content stays fresh.
+/*.png
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+/*.ico
+  Cache-Control: public, max-age=604800
