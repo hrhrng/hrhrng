@@ -18,21 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Generate notable contributions
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.notable.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: ""
-          plugin_notable: yes
-          plugin_notable_from: all
-          plugin_notable_repositories: yes
-          plugin_notable_types: commit, pull_request, issue
-          output_action: none
-
-      - name: Collect generated metrics
-        run: cp /metrics_renders/metrics.notable.svg ./metrics.notable.svg
-
       - name: Generate 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
@@ -43,6 +28,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add metrics.notable.svg profile-3d-contrib/
+          git add profile-3d-contrib/
           git diff --cached --quiet || git commit -m "chore: refresh profile visuals [skip ci]"
           git push

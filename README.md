@@ -50,12 +50,10 @@
 | **[Ratatui ecosystem](https://github.com/ratatui/awesome-ratatui)** | Added [Readio](https://github.com/ratatui/awesome-ratatui/pull/395) and [Martty](https://github.com/ratatui/awesome-ratatui/pull/413) to the ecosystem catalog |
 | **DeepSeek Harness ecosystem** | Shipped ACP, MCP Apps, and agent-plugin bridges; upstreamed them across community directories |
 
-![Notable contributions](./metrics.notable.svg)
-
 ## Contribution city
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg">
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season-animate.svg">
   <img alt="hrhrng GitHub contribution calendar rendered as a 3D city" src="./profile-3d-contrib/profile-season-animate.svg" width="100%">
 </picture>
@@ -78,7 +76,6 @@
 <sub>Visuals powered by
 <a href="https://github.com/kyechan99/capsule-render">Capsule Render</a> ·
 <a href="https://github.com/DenverCoder1/readme-typing-svg">Typing SVG</a> ·
-<a href="https://github.com/lowlighter/metrics">Metrics</a> ·
 <a href="https://github.com/yoshi389111/github-profile-3d-contrib">3D Contrib</a> ·
 <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">Activity Graph</a>
 </sub>
