@@ -30,6 +30,9 @@ jobs:
           plugin_notable_types: commit, pull_request, issue
           output_action: none
 
+      - name: Collect generated metrics
+        run: cp /metrics_renders/metrics.notable.svg ./metrics.notable.svg
+
       - name: Generate 3D contribution calendar
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
