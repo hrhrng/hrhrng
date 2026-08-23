@@ -10,9 +10,9 @@
 [![ACP](https://img.shields.io/badge/ACP-client_%2B_server-1B1A17?style=flat-square)](https://agentclientprotocol.com)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,rust,java,python,cloudflare,react,nodejs,swift&amp;theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts,rust,java,python,cloudflare,react,nodejs,swift&amp;theme=light">
-  <img alt="TypeScript, Rust, Java, Python, Cloudflare, React, Node.js, and Swift" src="https://skillicons.dev/icons?i=ts,rust,java,python,cloudflare,react,nodejs,swift&theme=light">
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts%2Crust%2Cjava%2Cpython%2Ccloudflare%2Creact%2Cnodejs%2Cswift&amp;theme=dark">
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=ts%2Crust%2Cjava%2Cpython%2Ccloudflare%2Creact%2Cnodejs%2Cswift&amp;theme=light">
+  <img alt="TypeScript, Rust, Java, Python, Cloudflare, React, Node.js, and Swift" src="https://skillicons.dev/icons?i=ts%2Crust%2Cjava%2Cpython%2Ccloudflare%2Creact%2Cnodejs%2Cswift&theme=light">
 </picture>
 
 </div>
